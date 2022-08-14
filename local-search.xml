@@ -5,11 +5,19 @@
   
   <entry>
     <title>psychological quality</title>
-    <link href="/2022/08/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <url>/2022/08/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <link href="/2022/08/14/psychologicalQuality/"/>
+    <url>/2022/08/14/psychologicalQuality/</url>
     
     <content type="html"><![CDATA[<p>be a kind person</p>]]></content>
     
+    
+    <categories>
+      
+      <category>golang</category>
+      
+      <category>test</category>
+      
+    </categories>
     
     
   </entry>
