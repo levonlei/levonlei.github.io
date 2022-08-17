@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>struct_tools</title>
+    <link href="/2022/08/17/struct-tools/"/>
+    <url>/2022/08/17/struct-tools/</url>
+    
+    <content type="html"><![CDATA[<h1 id="常用的golang-struct结构体工具"><a href="#常用的golang-struct结构体工具" class="headerlink" title=" 常用的golang struct结构体工具"></a><center> 常用的golang struct结构体工具</h1><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul><li><a href="#menuIndex1">背景</a></li><li><a href="#menuIndex2">用法一：json to go</a></li><li><a href="#menuIndex3">用法二：yaml to go</a></li><li><a href="#menuIndex4">用法三：json to proto</a></li><li><a href="#menuIndex5">用法三：sql to go </a></li></ul><h3 id="menuIndex1">背景</h3>写go代码的时候，经常遇到读取yaml文件，调用第三方库等场景。前期自己写数据结构，后面发现自己傻了，有现成的，输入后就出现自己想要的，简直不要太爽。<h3 id="menuIndex2">json to go</h3>json数据生成go结构体<pre class="prettyprint linenums"><code><span  id="jump" class="pln">https://mholt.github.io/json-to-go/</span></code></pre><h3 id="menuIndex3">yaml to go</h3>yaml数据生成结构体<pre class="prettyprint linenums"><code><span  id="jump" class="pln">https://zhwt.github.io/yaml-to-go/</span></code></pre><h3 id="menuIndex4">json to proto</h3>json数据生成proto结构<pre class="prettyprint linenums"><code><span  id="jump" class="pln">https://json-to-proto.github.io/</span></code></pre><h3 id="menuIndex5">sql to go</h3>sql数据生成go结构体（非常好用，可以直接支持gorm使用）<pre class="prettyprint linenums"><code><span  id="jump" class="pln">https://www.qetool.com/sql_json_go/sql.html</span></code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>golang</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>golang中下划线_的用法</title>
     <link href="/2022/08/14/underline_use/"/>
     <url>/2022/08/14/underline_use/</url>
