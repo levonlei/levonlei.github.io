@@ -16,21 +16,22 @@
   <meta name="author" content="levonlei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="常用的golang struct结构体工具目录 背景 用法一：json to go 用法二：yaml to go 用法三：json to proto 用法三：sql to go   背景 写go代码的时候，经常遇到读取yaml文件，调用第三方库等场景。前期自己写数据结构，后面发现自己傻了，有现成的，输入后就出现自己想要的，简直不要太爽。 json to go json数据生成go结构体 http">
+    <meta name="description" content="go语言 …的用法目录 背景 用法一：不定参传入 用法二：切片打散成单个字符串  背景 初次看go的代码的时候发现很多...的代码使用，好奇这是什么用法。 用法一：不定参传入 第一个用法主要是用于函数有多个不定参数的情况，表示为可变参数，可以接受任意个数但相同类型的参数。 比如下面的例子：PrintString函数能接受任意个string参数，然后把它打印出来 func PrintString(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="struct_tools">
-<meta property="og:url" content="http://levonlei.github.io/2022/08/17/struct-tools/index.html">
+<meta property="og:title" content="golang_...">
+<meta property="og:url" content="http://levonlei.github.io/2022/08/21/golang/index.html">
 <meta property="og:site_name" content="levonlei&#39;s blog">
-<meta property="og:description" content="常用的golang struct结构体工具目录 背景 用法一：json to go 用法二：yaml to go 用法三：json to proto 用法三：sql to go   背景 写go代码的时候，经常遇到读取yaml文件，调用第三方库等场景。前期自己写数据结构，后面发现自己傻了，有现成的，输入后就出现自己想要的，简直不要太爽。 json to go json数据生成go结构体 http">
+<meta property="og:description" content="go语言 …的用法目录 背景 用法一：不定参传入 用法二：切片打散成单个字符串  背景 初次看go的代码的时候发现很多...的代码使用，好奇这是什么用法。 用法一：不定参传入 第一个用法主要是用于函数有多个不定参数的情况，表示为可变参数，可以接受任意个数但相同类型的参数。 比如下面的例子：PrintString函数能接受任意个string参数，然后把它打印出来 func PrintString(">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-08-17T09:20:48.000Z">
-<meta property="article:modified_time" content="2022-08-17T10:18:38.768Z">
+<meta property="article:published_time" content="2022-08-21T14:56:55.000Z">
+<meta property="article:modified_time" content="2022-08-21T15:21:38.800Z">
 <meta property="article:author" content="levonlei">
+<meta property="article:tag" content="golang">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>struct_tools - levonlei&#39;s blog</title>
+  <title>golang_... - levonlei&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -183,7 +184,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="struct_tools"></span>
+            <span id="subtitle" data-typed-text="golang_..."></span>
           
         </div>
 
@@ -194,8 +195,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-17 17:20" pubdate>
-          August 17, 2022 pm
+        <time datetime="2022-08-21 22:56" pubdate>
+          August 21, 2022 pm
         </time>
       </span>
     
@@ -206,7 +207,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          399 words
+          510 words
         
       </span>
     
@@ -217,7 +218,7 @@
         
         
         
-          4 mins
+          5 mins
         
       </span>
     
@@ -255,36 +256,45 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">struct_tools</h1>
+            <h1 style="display: none">golang_...</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="常用的golang-struct结构体工具"><a href="#常用的golang-struct结构体工具" class="headerlink" title=" 常用的golang struct结构体工具"></a><center> 常用的golang struct结构体工具</h1><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+                <h1 id="go语言-…的用法"><a href="#go语言-…的用法" class="headerlink" title=" go语言 …的用法"></a><center> go语言 …的用法</h1><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
 <li><a href="#menuIndex1">背景</a></li>
-<li><a href="#menuIndex2">用法一：json to go</a></li>
-<li><a href="#menuIndex3">用法二：yaml to go</a></li>
-<li><a href="#menuIndex4">用法三：json to proto</a></li>
-<li><a href="#menuIndex5">用法三：sql to go </a></li>
+<li><a href="#menuIndex2">用法一：不定参传入</a></li>
+<li><a href="#menuIndex3">用法二：切片打散成单个字符串</a></li>
 </ul>
 <h3 id="menuIndex1">背景</h3>
-写go代码的时候，经常遇到读取yaml文件，调用第三方库等场景。前期自己写数据结构，后面发现自己傻了，有现成的，输入后就出现自己想要的，简直不要太爽。
-<h3 id="menuIndex2">json to go</h3>
-json数据生成go结构体
-<pre class="prettyprint linenums"><code><span  id="jump" class="pln">https://mholt.github.io/json-to-go/</span></code></pre>
+初次看go的代码的时候发现很多...的代码使用，好奇这是什么用法。
+<h3 id="menuIndex2">用法一：不定参传入</h3>
+第一个用法主要是用于函数有多个不定参数的情况，表示为可变参数，可以接受任意个数但相同类型的参数。
+比如下面的例子：PrintString函数能接受任意个string参数，然后把它打印出来
+<pre class="prettyprint linenums"><code><span class="pln">func PrintString(args ...string) &#123; 
+    for _, s:= range args&#123;
+        fmt.Println(s)
+    &#125;
+&#125;
+</span></code></pre>
+<h3 id="menuIndex3">用法二：切片打散成单个字符串</h3>
+假设我们定义了一个切片，我们现在需要调用PrintString函数,把切片中的每一个字符串都输出出来，假如没有...语法糖，我们就需要遍历了，但是有了...之后，我们只需要按照下面的示例书写即可
+<pre class="prettyprint linenums"><code><span class="pln">func main()&#123;
+var EnumString = []string&#123;
+        "levon",
+        "lei",
+        "kind",
+        "man",
+    &#125;
+    PrintString(EnumString...) //切片被当成多个单字符串传入
+&#125;</span></code></pre>
+输出结果
+<pre class="prettyprint linenums"><code><span class="pln">levon
+lei
+kind
+man
+</span></code></pre>
 
-
-<h3 id="menuIndex3">yaml to go</h3>
-yaml数据生成结构体
-<pre class="prettyprint linenums"><code><span  id="jump" class="pln">https://zhwt.github.io/yaml-to-go/</span></code></pre>
-
-<h3 id="menuIndex4">json to proto</h3>
-json数据生成proto结构
-<pre class="prettyprint linenums"><code><span  id="jump" class="pln">https://json-to-proto.github.io/</span></code></pre>
-
-<h3 id="menuIndex5">sql to go</h3>
-sql数据生成go结构体（非常好用，可以直接支持gorm使用）
-<pre class="prettyprint linenums"><code><span  id="jump" class="pln">https://www.qetool.com/sql_json_go/sql.html</span></code></pre>
 
 
                 
@@ -294,27 +304,13 @@ sql数据生成go结构体（非常好用，可以直接支持gorm使用）
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/golang/" class="category-chain-item">golang</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
+        <a href="/tags/golang/">#golang</a>
+      
     </div>
-  
   
 </div>
 
@@ -324,8 +320,8 @@ sql数据生成go结构体（非常好用，可以直接支持gorm使用）
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>struct_tools</div>
-      <div>http://levonlei.github.io/2022/08/17/struct-tools/</div>
+      <div>golang_...</div>
+      <div>http://levonlei.github.io/2022/08/21/golang/</div>
     </div>
     <div class="license-meta">
       
@@ -337,7 +333,7 @@ sql数据生成go结构体（非常好用，可以直接支持gorm使用）
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>August 17, 2022</div>
+          <div>August 21, 2022</div>
         </div>
       
       
@@ -367,18 +363,12 @@ sql数据生成go结构体（非常好用，可以直接支持gorm使用）
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/21/golang/" title="golang_...">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">golang_...</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/08/14/underline_use/" title="golang中下划线_的用法">
-                        <span class="hidden-mobile">golang中下划线_的用法</span>
+                      <a href="/2022/08/17/struct-tools/" title="struct_tools">
+                        <span class="hidden-mobile">struct_tools</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

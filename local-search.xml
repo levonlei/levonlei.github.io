@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>golang_...</title>
+    <link href="/2022/08/21/golang/"/>
+    <url>/2022/08/21/golang/</url>
+    
+    <content type="html"><![CDATA[<h1 id="go语言-…的用法"><a href="#go语言-…的用法" class="headerlink" title=" go语言 …的用法"></a><center> go语言 …的用法</h1><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul><li><a href="#menuIndex1">背景</a></li><li><a href="#menuIndex2">用法一：不定参传入</a></li><li><a href="#menuIndex3">用法二：切片打散成单个字符串</a></li></ul><h3 id="menuIndex1">背景</h3>初次看go的代码的时候发现很多...的代码使用，好奇这是什么用法。<h3 id="menuIndex2">用法一：不定参传入</h3>第一个用法主要是用于函数有多个不定参数的情况，表示为可变参数，可以接受任意个数但相同类型的参数。比如下面的例子：PrintString函数能接受任意个string参数，然后把它打印出来<pre class="prettyprint linenums"><code><span class="pln">func PrintString(args ...string) &#123;     for _, s:= range args&#123;        fmt.Println(s)    &#125;&#125;</span></code></pre><h3 id="menuIndex3">用法二：切片打散成单个字符串</h3>假设我们定义了一个切片，我们现在需要调用PrintString函数,把切片中的每一个字符串都输出出来，假如没有...语法糖，我们就需要遍历了，但是有了...之后，我们只需要按照下面的示例书写即可<pre class="prettyprint linenums"><code><span class="pln">func main()&#123;var EnumString = []string&#123;        "levon",        "lei",        "kind",        "man",    &#125;    PrintString(EnumString...) //切片被当成多个单字符串传入&#125;</span></code></pre>输出结果<pre class="prettyprint linenums"><code><span class="pln">levonleikindman</span></code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>golang</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>struct_tools</title>
     <link href="/2022/08/17/struct-tools/"/>
     <url>/2022/08/17/struct-tools/</url>
